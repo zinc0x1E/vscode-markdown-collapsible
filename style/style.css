@@ -1,0 +1,36 @@
+details {
+  margin-bottom: 1em;
+}
+
+details > summary:first-of-type {
+  list-style-type: none;
+}
+
+::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+}
+
+details > summary .details-marker:before {
+  content: "\27A4";
+}
+
+details[open] > summary .details-marker:before {
+  content: "\25BC";
+}
+
+details > *:not(summary) {
+  padding-left: 1.25em;
+}
+
+details > p {
+  margin-bottom: 0.5em;
+}
