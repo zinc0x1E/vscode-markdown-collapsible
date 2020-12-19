@@ -1,0 +1,41 @@
+{
+	"name": "markdown-collapsible",
+	"displayName": "markdown-collapsible",
+	"publisher": "zinc0x1E",
+	"description": "Adds collapsibles via the HTML <details> and <summary> elements",
+	"version": "0.0.1",
+	"keywords": [
+		"collapsible",
+		"markdown",
+		"details",
+		"summary",
+		"github"
+	],
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./extension.js",
+	"contributes": {
+		"markdown.markdownItPlugins": true,
+		"markdown.previewStyles": [
+			"./style/style.css"
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"vscode-test": "^1.4.1"
+	},
+	"dependencies": {
+		"markdown-it": "^12.0.3",
+		"markdown-it-collapsible": "^1.0.0"
+	}
+}
